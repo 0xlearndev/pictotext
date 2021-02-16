@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Image to Text</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome-all.min.css')}}" />
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+              {% if text %}
+              <img src="static/img/{{ imgfile }}" style='
+              border: 2px rgb(222 222 222);
+              padding: 10px;
+              border-style: dashed;
+              width: 80%;'/>
+							<h1>Your output text:</h1>
+							<p style="
+              border: 2px #dfdfdf;
+              border-style: dashed;
+              padding: 10px;
+              word-break: break-word;">{{ text }}</p>
+              {% endif %}
+						</header>
+
+            
+						<footer>
+
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Bilawal Riaz</li><li>Source: <a href="">Github</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>

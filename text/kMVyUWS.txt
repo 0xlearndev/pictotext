@@ -1,8 +1,0 @@
-Ifused with the full directory (main(‘C:\Users\test-tx')} The code retums the error attributeError:
-‘str! object has no attribute ‘exists’ . If| remove the line with path.exists() Igeta
-similar error: AttributeError: ‘str’ object has no attribute ‘realpath' . By using the
-filename main( ‘test. txt') everything works, as long as the file is in the same folder as the
-python script that contains the function.
-
-So | tried reading the docs, which states for both path.exists() and path. realpatht) :
-
